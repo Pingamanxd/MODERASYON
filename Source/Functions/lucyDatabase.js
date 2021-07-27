@@ -16,7 +16,7 @@ if(this) this.then(message => {
 class lucyDatabase {
 
    static async man(user, admin) {
-    await user.roles.cache.has(settings.BoosterRole) ? user.roles.set([ settings.ManRole, settings.BoosterRole ]) : user.roles.set([ settings.ManRole ])
+    await user.roles.cache.has(settings.BoosterRole) ? user.roles.set([ settings.ManRole, settings.BoosterRole, settings.ManRole2 ]) : user.roles.set([ settings.ManRole, settings.ManRole2 ])
     let regData = await RegisterData.findOne({ AdminID: admin.id })
     if(regData)
      { await regData.Man++; regData.Total++;  regData.save(); }
@@ -25,7 +25,7 @@ class lucyDatabase {
   };
 
     static async woman(user, admin) {
-    await user.roles.cache.has(settings.BoosterRole) ? user.roles.set([ settings.WomanRole, settings.BoosterRole ]) : user.roles.set([ settings.WomanRole ])
+    await user.roles.cache.has(settings.BoosterRole) ? user.roles.set([ settings.WomanRole, settings.BoosterRole, settings.ManRole2 ]) : user.roles.set([ settings.WomanRole , settings.WomanRole2 ])
     let regData = await RegisterData.findOne({ AdminID: admin.id })
     if(regData)
      { await regData.Woman++; regData.Total++; regData.save(); }

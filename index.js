@@ -90,7 +90,7 @@ var string = "";
 client.on("guildMemberAdd", async (member) => {
 let security = Date.now() - member.user.createdTimestamp > 1000 * 60 * 60 * 24 * 15 ? "güvenli" : "şüpheli"
 let channel = client.channels.cache.get(settings.welcomeChannel);
-let embed = new MessageEmbed().setColor("RANDOM").setAuthor(member.guild.name, member.guild.iconURL({dynamic: true})).setFooter("Lucy ❤️ " + member.guild.name).setTimestamp()
+let embed = new MessageEmbed().setColor("RANDOM").setAuthor(member.guild.name, member.guild.iconURL({dynamic: true})).setFooter("Metoa ❤️ " + member.guild.name).setTimestamp()
 if(security === "şüpheli") {
  member.setNickname("Şüpheli")
  channel.send(embed.setDescription(`${member} (${member.id}) az önce sunucuya katıldı, fakat hesabı \`${moment(member.user.createdAt).locale("tr").format("LLL")}\` tarihinde \`(${client.giris(member.user.createdAt)})\` açıldığı için <@&${settings.Suspicious}> rolü verildi`));
@@ -98,15 +98,15 @@ if(security === "şüpheli") {
 } else if (security === "güvenli"){
  member.user.username.includes(settings.Tag) ? member.setNickname(`${settings.Tag} İsim | Yaş`) && member.roles.add(settings.FamilyRole) && member.roles.add(settings.Unregistered) : member.setNickname(`${settings.Untag} İsim | Yaş`) && member.roles.add(settings.Unregistered)
  channel.send(`
-\`>\` Sunucumuza hoşgeldin ${member}! Seninle birlikte ${member.guild.memberCount} kişiye ulaştık.
+ Sunucumuza hoşgeldin ${member}! Seninle birlikte ${member.guild.memberCount} kişiye ulaştık.
     
-    \`>\` Hesabın \`${moment(member.user.createdAt).locale("tr").format("LLL")}\` tarihinde \`(${client.giris(member.user.createdAt)})\` açılmış.
+ Hesabın \`${moment(member.user.createdAt).locale("tr").format("LLL")}\` tarihinde \`(${client.giris(member.user.createdAt)})\` açılmış.
     
-      \`>\` Sunucu kurallarımız <#${settings.rulesChannel}> kanalında belirtilmiştir. Unutma! Sunucu içerisindeki tutumun kuralların izin verdiği sınırları aşarsa gerekli ceza-i işlemler uygulanır.
+ Sunucu kurallarımız <#${settings.rulesChannel}> kanalında belirtilmiştir. Unutma! Sunucu içerisindeki tutumun kuralların izin verdiği sınırları aşarsa gerekli ceza-i işlemler uygulanır.
     
-    \`>\` Tagımızı \`(${settings.Tag})\` alarak bizlere destek olabilirsin.
+ Tagımızı \`(${settings.Tag})\` alarak bizlere destek olabilirsin.
     
-\`>\` Sol taraftaki \`V.Confirmed\` kanallarından birine girip \`isim-yaş\` belirterek kayıt olabilirsin.`)
+ Sol taraftaki \`V.Confirmed\` kanallarından birine girip \`isim-yaş\` belirterek kayıt olabilirsin.`)
 };
 });
 
@@ -120,5 +120,5 @@ let data = await new UserData({ UserID: member.id, Name: namedata.LastName, Proc
 });
 
 
-client.login(settings.botToken);
+client.login(process.env.token);
 // ------------------[ END ]------------------ \\
