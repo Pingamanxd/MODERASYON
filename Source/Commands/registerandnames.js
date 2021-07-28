@@ -5,7 +5,7 @@ const settings = require('../Settings/settings.json');
 const {lucyDatabase} = require('../Functions/lucyDatabase');
 module.exports = {
   name: "isim",
-  aliases: ["i", "name","e","k","erkek","kadın","ERKEK","KADIN","kayıt"],
+  aliases: ["i","name","e","k","erkek","kadın","ERKEK","KADIN","kayıt"],
   run: async(client, message, args) => {
 
   function embed(msg) {
