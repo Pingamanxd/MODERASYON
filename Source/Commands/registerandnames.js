@@ -5,7 +5,7 @@ const settings = require('../Settings/settings.json');
 const {lucyDatabase} = require('../Functions/lucyDatabase');
 module.exports = {
   name: "isim",
-  aliases: ["i", "name"],
+  aliases: ["i", "name","e","k","erkek","kadın","ERKEK","KADIN","kayıt"],
   run: async(client, message, args) => {
 
   function embed(msg) {
@@ -42,7 +42,7 @@ module.exports = {
     let msgembed = new MessageEmbed()
     .setColor("RANDOM")
     .setAuthor(message.member.displayName, message.author.avatarURL({dynamic:true}))
-    .setDescription(`${user} kullanıcının adı başarıyla \`"${name_2}"\` olarak değiştirildi.\n\nLütfen 30 saniye alttaki butonlara basarak kullanıcının cinsiyetini belirleyin.\n\nKullanıcının eski isimlerine bakarak kaydetmeniz önerilir, eski isimler için \`${settings.botPrefix}isimler <user>\``)
+    .setDescription(`${user} kullanıcının adı başarıyla \`"${name_2}"\` olarak değiştirildi.\n\nLütfen 30 saniye alttaki butonlara basarak kullanıcının cinsiyetini belirleyin.\n\nKullanıcının eski isimlerine bakarak kaydetmeniz önerilir, eski isimler için \`${settings.botPrefix}isimler @METOA/ID\``)
     .setFooter(message.guild.name, message.guild.iconURL({dynamic:true}))
     .setTimestamp();
 
