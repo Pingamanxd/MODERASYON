@@ -110,9 +110,9 @@ if(security === "şüpheli") {
 };
 });
 
-client.on("message", message => {
-if(message.content.toLocaleLowerCase().includes(".tag" || "!tag" || "?tag" || "TAG")) return message.channel.send(settings.Tag)
-});
+//client.on("message", message => {
+//if(message.content.toLocaleLowerCase().includes(".tag" || "!tag" || "?tag" || "TAG")) return message.channel.send(settings.Tag)
+//});
 
 client.on("guildMemberRemove", async (member) => {
 let namedata = await NameData.findOne({ UserID: member.id });
