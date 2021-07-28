@@ -57,13 +57,13 @@ module.exports = {
       if(button.id === "MAN") {
       await lucyDatabase.man(user, message.author)
       await lucyDatabase.setusername(user, name_2, `<@&${settings.ManRole}>`)
-      await button.think(true)
+      await button.think(true);
       await button.reply.edit(`${user} adlı kullanıcı başarıyla <@&${settings.ManRole}> rolüyle kayıt edildi`)
       }
       if(button.id === "WOMAN") {
       await lucyDatabase.woman(user, message.author)
       await lucyDatabase.setusername(user, name_2, `<@&${settings.WomanRole}>`)
-      await button.think(true)
+      await button.think(true);
       await button.reply.edit(`${user} adlı kullanıcı başarıyla <@&${settings.WomanRole}> rolüyle kayıt edildi`)
   }
     });
