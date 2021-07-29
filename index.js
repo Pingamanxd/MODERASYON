@@ -98,15 +98,13 @@ if(security === "şüpheli") {
 } else if (security === "güvenli"){
  member.user.username.includes(settings.Tag) ? member.setNickname(`${settings.Tag} İsim | Yaş`) && member.roles.add(settings.FamilyRole) && member.roles.add(settings.Unregistered) : member.setNickname(`${settings.Untag} İsim | Yaş`) && member.roles.add(settings.Unregistered)
  channel.send(`
- Sunucumuza hoşgeldin ${member}! Seninle birlikte ${member.guild.memberCount} kişiye ulaştık.
+ :tada: Sunucumuza hoşgeldin ${member}! Seninle birlikte ${member.guild.memberCount} kişiye ulaştık.
     
  Hesabın \`${moment(member.user.createdAt).locale("tr").format("LLL")}\` tarihinde \`(${client.giris(member.user.createdAt)})\` açılmış.
     
- Sunucu kurallarımız <#${settings.rulesChannel}> kanalında belirtilmiştir. Unutma! Sunucu içerisindeki tutumun kuralların izin verdiği sınırları aşarsa gerekli ceza-i işlemler uygulanır.
+ Sunucu kurallarımız <#${settings.rulesChannel}> kanalında belirtilmiştir. Unutma! Sunucu içerisindeki hareketlerin kuralların izin verdiği sınırları aşarsa gerekli ceza-i işlemler uygulanır.
     
- Tagımızı \`(${settings.Tag})\` alarak bizlere destek olabilirsin.
-    
- Sol taraftaki \`V.Confirmed\` kanallarından birine girip \`isim-yaş\` belirterek kayıt olabilirsin.`)
+ Tagımızı \`(${settings.Tag})\` alarak bizlere destek olabilirsin.`)
 };
 });
 
