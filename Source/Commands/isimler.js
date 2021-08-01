@@ -12,7 +12,7 @@ module.exports = {
     message.channel.send(embed).sil(10)
     }
 
-    if(![settings.RegisterStaff].some(x => message.member.roles.cache.get(x)) && !message.member.hasPermission(8)) return embed("Hata: bu komudu kullanamzsın.");
+    if(!message.member.roles.cache.has(settings.RegisterStaff) && !message.member.hasPermission(8)) return embed("Hata: bu komudu kullanamzsın.");
 
     let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
     if(!user) return embed("Hata: Bir kullanıcı belirtin.")
