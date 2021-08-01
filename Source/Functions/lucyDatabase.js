@@ -25,7 +25,7 @@ class lucyDatabase {
   };
 
     static async woman(user, admin) {
-    await user.roles.cache.has(settings.BoosterRole) ? user.roles.set([ settings.WomanRole, settings.BoosterRole, settings.ManRole2 ]) : user.roles.set([ settings.WomanRole , settings.WomanRole2 ])
+    await user.roles.cache.has(settings.BoosterRole) ? user.roles.set([ settings.WomanRole, settings.BoosterRole, settings.WomanRole2 ]) : user.roles.set([ settings.WomanRole , settings.WomanRole2 ])
     let regData = await RegisterData.findOne({ AdminID: admin.id })
     if(regData)
      { await regData.Woman++; regData.Total++; regData.save(); }

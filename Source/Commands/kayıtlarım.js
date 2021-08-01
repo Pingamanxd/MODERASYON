@@ -13,7 +13,7 @@ module.exports = {
     } 
 
 
-    if(!message.member.roles.cache.has(settings.RegisterStaff) && !message.member.hasPermission(8)) return embed("Hata: Bu komudu kullanamazsın.");
+    if (!settings.RegisterStaff.some(role => message.member.roles.cache.get(role)) && (!message.member.hasPermission("ADMINISTRATOR"))) ;
 
     let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
     if(user && !user.roles.cache.has(settings.RegisterStaff)) return embed(`Hata: bu kullanıcı yetkili değil!`);

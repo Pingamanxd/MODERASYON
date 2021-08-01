@@ -16,7 +16,7 @@ module.exports = {
 
     let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
     if(!user || user.id === message.author.id || user.id === message.guild.OwnerID || user.bot || user.roles.highest.position >= message.member.roles.highest.position) return embed("Bu kullanıcıyı kayıt edemem veya bir kullanıcı belirtmedin.")
-    if (!settings.roles.RegisterStaff.some(role => message.member.roles.cache.get(role)) && (!message.member.hasPermission("ADMINISTRATOR"))) 
+    if (!settings.RegisterStaff.some(role => message.member.roles.cache.get(role)) && (!message.member.hasPermission("ADMINISTRATOR"))) 
     if(!args[1]) return embed("Hata: Bir isim belirtmelisin");
     let name_1 = args[1].charAt(0).replace("i", "İ").toLocaleUpperCase() + args[1].slice(1).toLocaleLowerCase();
     let age = Number(args[2]);
