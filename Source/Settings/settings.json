@@ -1,28 +1,28 @@
 {
   "botOwner": "518713967221145600",
   "botPrefix": ".",
-  "botVoiceChannel": "868797670251188264",
+  "botVoiceChannel": "875336114922197012",
   "botActivityName": "IS NEVER LOSE ?",
   "botActivityType": "LISTENING",
   "botStatus": "online",
 
   "mongoConnectionLink": "mongodb+srv://metoa:MT1907ac@cluster0.qnqsu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
 
-  "welcomeChannel": "868797669684940868",
+  "welcomeChannel": "875336092012916787",
   "rulesChannel": "868802377799577700",
-  "Suspicious": "868797669592674334",
-  "Unregistered": "868797669584273425",
+  "Suspicious": "875336026355298324",
+  "Unregistered": "875336022844641311",
 
 
-  "FamilyRole": "868797669609447463",
+  "FamilyRole": "875336005891293184",
   "Tag": "✧",
   "Untag": "✧",
 
-  "RegisterStaff": ["868797669647196187"],
-  "ManRole": "868797669592674339",
-  "ManRole2" : "868797669592674338",
-  "WomanRole": "868797669592674341",
-  "WomanRole2": "868797669592674340",
+  "RegisterStaff": ["875335982763888700","875335983363682375"],
+  "ManRole": "875336022278406244",
+  "ManRole2" : "875336020885905489",
+  "WomanRole": "875336019589869578",
+  "WomanRole2": "875336020382593084",
   "BoosterRole": "868804784663187457",
 
   "Yes": "✅",
